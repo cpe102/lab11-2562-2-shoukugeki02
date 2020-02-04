@@ -1,7 +1,7 @@
 #include<iostream>
 
 using namespace std;
-
+unsigned long long gcd(int x,int y);
 //Write function prototype here
 
 int main(){
@@ -14,7 +14,16 @@ int main(){
 	
 	return 0;
 }
-
+unsigned long long gcd(int x,int y){
+if(x%y==0)
+{
+return y;	
+}else
+if(x%y!=0)
+{
+return gcd(y,x%y);
+}
+}
 //Write function definition here
 /*
 ??? gcd(???){
